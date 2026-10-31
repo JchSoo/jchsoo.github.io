@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="shell footer-top">
+    <div><a class="footer-brand" href="{{ '/' | relative_url }}">{% assign brand_parts = site.title | split: '.' %}{% for part in brand_parts %}{% unless forloop.first %}<span>.</span>{% endunless %}{{ part | escape }}{% endfor %}</a><p>Curiosity, documented.</p></div>
+    <div class="footer-links">
+      <a href="{{ '/archive/' | relative_url }}">Archive</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      {% unless site.github_username == 'YOUR_USERNAME' %}<a href="https://github.com/{{ site.github_username | escape }}" rel="noopener noreferrer" target="_blank">GitHub ↗</a>{% endunless %}
+    </div>
+  </div>
+  <div class="shell footer-bottom"><span>© {{ 'now' | date: '%Y' }} {{ site.author | escape }}. Built with Jekyll &amp; GitHub Pages.</span><a href="#top">Back to top ↑</a></div>
+</footer>

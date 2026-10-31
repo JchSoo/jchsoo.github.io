@@ -1,0 +1,14 @@
+# 실제 글을 작성할 때 이 파일을 복사해 _posts/YYYY-MM-DD-english-slug.md 이름으로 저장하세요.
+# 이 파일은 .txt이므로 GitHub Pages에 게시되지 않습니다.
+---
+layout: post
+title: "글 제목"
+description: "글을 한 줄로 요약하세요."
+categories: [development]
+tags: [keyword1, keyword2]
+# sample: true  # 예시 글이라면 사용, 실제 글에서는 삭제
+---
+
+## 첫 번째 소제목
+
+여기에 Markdown으로 본문을 작성합니다.

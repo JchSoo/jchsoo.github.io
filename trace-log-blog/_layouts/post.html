@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% assign category_id = page.categories | first %}
+{% assign category_meta = site.data.categories | where: 'slug', category_id | first %}
+<section class="post-hero shell narrow-shell">
+  <a href="{{ '/archive/' | relative_url }}" class="eyebrow back-link">← &nbsp; ALL NOTES</a>
+  <div class="post-kicker"><span class="post-category">{{ category_meta.name | default: '기록' }}</span><span>/</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y.%m.%d' }}</time>{% if page.sample %}<span class="sample-label">SAMPLE POST</span>{% endif %}</div>
+  <h1>{{ page.title | escape }}</h1>
+  <p class="post-description">{{ page.description | escape }}</p>
+  <div class="post-byline"><span class="mini-avatar" aria-hidden="true">&gt;_</span><span>{{ site.author | escape }}</span><span class="byline-dot">·</span><span>{{ page.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span></div>
+</section>
+<div class="shell narrow-shell"><div class="article-rule"></div></div>
+<article class="article-body shell narrow-shell prose">
+{% if page.sample %}<div class="example-note"><strong>예시 게시글입니다.</strong> 블로그 구성 예시로 제공되며 실제 개인 경험이나 성과를 의미하지 않습니다. 본인 내용으로 수정하거나 삭제하세요.</div>{% endif %}
+{{ content }}
+</article>
+<section class="shell narrow-shell post-end">
+  <div class="tag-list">{% for tag in page.tags %}<span>#{{ tag | escape }}</span>{% endfor %}</div>
+  <div class="post-end-actions"><a class="secondary-button" href="{{ '/archive/' | relative_url }}">← 모든 글 보기</a><button type="button" class="secondary-button copy-url">링크 복사 ↗</button></div>
+</section>

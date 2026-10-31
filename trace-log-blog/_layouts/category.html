@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% assign info = site.data.categories | where: 'slug', page.category_slug | first %}
+{% assign entries = site.categories[page.category_slug] %}
+<section class="shell page-heading category-heading"><a href="{{ '/#categories' | relative_url }}" class="eyebrow back-link">← &nbsp; ALL CATEGORIES</a><div class="category-heading-line"><span class="category-hero-icon accent-{{ info.accent }}">{{ info.symbol | escape }}</span><span class="eyebrow">{{ info.english }}</span></div><h1>{{ info.name }}</h1><p>{{ info.description }}</p><div class="heading-meta"><span class="tiny-status-dot"></span> {{ entries.size | default: 0 }} NOTES IN THIS CATEGORY</div></section>
+<section class="shell inner-section"><div class="section-heading compact-heading"><h2>글 목록 <span class="count-text">/ {{ entries.size | default: 0 | prepend: '0' }}</span></h2></div>
+{% if entries and entries.size > 0 %}<div class="post-grid">{% for post in entries %}{% include post-card.html post=post %}{% endfor %}</div>{% else %}<div class="empty-state">이 카테고리의 첫 글을 준비해 보세요.<br><span>새 글은 _posts 폴더에서 추가할 수 있습니다.</span></div>{% endif %}
+</section>

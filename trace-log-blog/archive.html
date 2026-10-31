@@ -1,0 +1,9 @@
+---
+layout: default
+title: Archive
+description: 개발 및 보안 학습 기록 전체 글 목록
+permalink: /archive/
+---
+<section class="shell page-heading"><div class="eyebrow">/ INDEX OF KNOWLEDGE</div><h1>All <em>notes.</em></h1><p>생각하고, 실험하고, 기록한 모든 글을 모았습니다.</p><div class="heading-meta"><span class="tiny-status-dot"></span> {{ site.posts.size }} ENTRIES & COUNTING</div></section>
+<section class="shell inner-section"><div class="archive-toolbar"><div class="archive-filter-label">FILTER BY CATEGORY <span>↓</span></div><div class="filter-controls" role="group" aria-label="카테고리 필터"><button type="button" class="filter-button active" data-category="all" aria-pressed="true">전체</button>{% for item in site.data.categories %}<button type="button" class="filter-button" data-category="{{ item.slug }}" aria-pressed="false">{{ item.name }}</button>{% endfor %}</div></div>
+<div class="post-grid archive-grid" id="archive-results">{% for post in site.posts %}<div class="archive-item" data-category="{{ post.categories | first }}">{% include post-card.html post=post %}</div>{% endfor %}</div><p class="empty-state archive-empty" hidden>이 카테고리에는 아직 글이 없습니다.</p></section>

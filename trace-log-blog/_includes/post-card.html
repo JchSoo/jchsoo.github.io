@@ -1,0 +1,9 @@
+{% assign item = include.post %}
+{% assign category_id = item.categories | first %}
+{% assign category_meta = site.data.categories | where: 'slug', category_id | first %}
+<article class="post-card">
+  <div class="post-card-meta"><span class="post-category">{{ category_meta.name | default: '기록' }}</span><span class="meta-separator">/</span><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%Y.%m.%d' }}</time>{% if item.sample %}<span class="sample-label">SAMPLE</span>{% endif %}</div>
+  <h3><a class="post-title-link" href="{{ item.url | relative_url }}">{{ item.title | escape }} <span aria-hidden="true">↗</span></a></h3>
+  <p>{{ item.description | default: item.excerpt | strip_html | normalize_whitespace | truncate: 125 | escape }}</p>
+  <div class="post-card-bottom"><div class="tag-list">{% for tag in item.tags limit:3 %}<span>#{{ tag | escape }}</span>{% endfor %}</div><span class="post-arrow" aria-hidden="true">→</span></div>
+</article>

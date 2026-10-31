@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="hero"><div class="shell hero-grid">
+  <div class="hero-copy">
+    <div class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> PERSONAL FIELD NOTES <span class="version">// EST. 2026</span></div>
+    <h1>Think deeply.<br><span>Trace everything.</span></h1>
+    <p class="hero-korean">코드를 읽고, 동작을 추적하고,<br>배운 것을 기록합니다.</p>
+    <p class="hero-description">{{ site.about_short | escape }}</p>
+    <div class="hero-cta"><a class="primary-button" href="{{ '/archive/' | relative_url }}">Explore notes <span aria-hidden="true">↗</span></a><a class="text-button" href="{{ '/about/' | relative_url }}">About me <span aria-hidden="true">→</span></a></div>
+    <div class="hero-footnote"><span class="live-dot"></span> LEARNING IN PUBLIC <span class="hero-footnote-separator">·</span> BUILDING & DOCUMENTING</div>
+  </div>
+  <div class="hero-visual" aria-label="보안 연구 및 개발을 상징하는 터미널 그래픽">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="crosshair crosshair-a">+</span><span class="crosshair crosshair-b">+</span>
+    <div class="terminal-window"><div class="terminal-titlebar"><div class="terminal-dots"><i></i><i></i><i></i></div><span>~/{{ site.title | escape }}</span><span>⌘</span></div>
+      <div class="terminal-content"><div class="terminal-dim">// a place for things worth understanding</div><div class="terminal-line"><span class="terminal-dollar">$</span> whoami</div><div class="terminal-output">{{ site.role | escape }}</div><div class="terminal-line"><span class="terminal-dollar">$</span> ls ./interests</div><div class="terminal-output"><span>reverse-engineering/</span><br><span>system-security/</span><br><span>digital-forensics/</span></div><div class="terminal-line"><span class="terminal-dollar">$</span> echo $MOTTO</div><div class="terminal-quote">"Curiosity, documented."</div><div class="terminal-line"><span class="terminal-dollar">$</span> <span class="cursor-block"></span></div></div>
+    </div>
+    <div class="hero-floating-label">[ KNOWLEDGE IS COMPOUND INTEREST ]</div>
+  </div>
+</div></section>
+<section class="quick-stats shell"><div><strong>06</strong><span>TOPIC TRACKS</span></div><div><strong>{{ site.posts.size | prepend: '0' }}</strong><span>FIELD NOTES</span></div><div><strong>∞</strong><span>THINGS TO LEARN</span></div><div class="stats-aside">READ <span>→</span> EXPLORE <span>→</span> DOCUMENT</div></section>
+<section class="shell section-block" id="categories"><div class="section-heading"><div><div class="eyebrow"><span class="section-serial">01 /</span> SUBJECT INDEX</div><h2>Explore by <em>topic.</em></h2><p>관심 분야별로 쌓아가는 기술 기록 아카이브</p></div><a class="section-link" href="{{ '/archive/' | relative_url }}">Browse all notes ↗</a></div>
+<div class="category-grid">{% for item in site.data.categories %}{% assign cat_entries = site.categories[item.slug] %}<a class="category-tile accent-{{ item.accent }}" href="{{ '/categories/' | append: item.slug | append: '/' | relative_url }}"><div class="category-tile-top"><span class="category-symbol">{{ item.symbol | escape }}</span><span class="category-arrow">↗</span></div><div><span class="category-small">{{ item.english }}</span><h3>{{ item.name }}</h3><p>{{ item.short }}</p></div><div class="category-tile-bottom"><span>{{ cat_entries.size | default: 0 }} NOTES</span><span class="tile-progress"></span></div></a>{% endfor %}</div>
+</section>
+<section class="shell section-block latest-block"><div class="section-heading"><div><div class="eyebrow"><span class="section-serial">02 /</span> RECENT UPDATES</div><h2>Latest <em>notes.</em></h2><p>새롭게 탐구하고 정리한 이야기들</p></div><a class="section-link" href="{{ '/archive/' | relative_url }}">View archive ↗</a></div><div class="post-grid">{% for post in site.posts limit:6 %}{% include post-card.html post=post %}{% endfor %}</div></section>
+<section class="shell bottom-quote"><div><span class="eyebrow">// WHY I WRITE</span><h2>Learn it. Break it down.<br><span>Write it so it stays.</span></h2></div><a href="{{ '/about/' | relative_url }}" class="circle-link" aria-label="자기소개 페이지로 이동">↗</a></section>
