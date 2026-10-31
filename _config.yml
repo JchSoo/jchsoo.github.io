@@ -1,16 +1,16 @@
 # 여기만 수정해도 블로그의 기본 정보가 변경됩니다.
-title: "trace.log"
+title: "청정수"
 subtitle: "Security & Development Field Notes"
-description: "개발, CTF, 보안 연구를 탐구하고 기록하는 개인 기술 블로그"
-author: "YOUR NAME"
+description: "청정한 공간"
+author: "JchSoo"
 role: "Security Learner · Developer"
 intro: "코드를 읽고, 동작을 추적하고, 배운 것을 기록합니다."
-about_short: "시스템 보안과 리버스 엔지니어링, 디지털 포렌식에 관심을 두고 공부하며 기술적 발견을 정리합니다."
-github_username: "YOUR_USERNAME"  # 본인 GitHub 아이디로 변경
-email: ""                     # 선택 사항: 공개할 이메일만 입력
+about_short: "시스템 보안과 리버스 엔지니어링에 관심을 두고 공부하며 기술적 발견을 정리합니다."
+github_username: "JchSoo"  # 본인 GitHub 아이디로 변경
+email: "rlqja1220@gmail.com"                     # 선택 사항: 공개할 이메일만 입력
 
 # GitHub 사용자 사이트: https://YOUR_USERNAME.github.io
-url: "https://YOUR_USERNAME.github.io"
+url: "https://jchsoo.github.io"
 baseurl: ""
 lang: ko-KR
 timezone: Asia/Seoul
