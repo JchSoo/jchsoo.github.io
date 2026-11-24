@@ -4,7 +4,6 @@ title: "재현 가능한 디버깅 기록 작성하기"
 description: "문제를 재현하고 원인을 좁혀 가는 과정을 효과적으로 남기는 방법."
 categories: [development]
 tags: [debugging, development, workflow]
-sample: true
 ---
 
 ## 문제를 재현할 수 있어야 한다
