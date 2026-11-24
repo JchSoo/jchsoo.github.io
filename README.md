@@ -54,7 +54,7 @@ git push -u origin main
 
 ## 4. 새 게시글 쓰기
 
-`_posts/` 폴더에 **`YYYY-MM-DD-english-title.md`** 형식으로 파일을 추가합니다. 예를 들어 `_posts/2026-10-30-my-first-post.md`:
+카테고리 코드와 같은 이름의 `_posts/` 하위 폴더에 **`YYYY-MM-DD-english-title.md`** 형식으로 파일을 추가합니다. 개발 글은 `_posts/development/2026-10-30-my-first-post.md`에 작성합니다.
 
 ````md
 ---
@@ -76,11 +76,23 @@ print("Hello, trace.log!")
 ```
 ````
 
-- `categories`에는 **6개 카테고리 코드 중 하나**를 입력하세요.
+- `categories`에는 게시글을 저장한 폴더의 카테고리 코드를 입력하세요.
 - `sample: true`는 **예시 글 표시**입니다. 실제 글에서는 제거하세요.
 - `_posts/_POST_TEMPLATE.md.txt`를 복사해 `.md` 파일로 만들면 편합니다.
 - **게시글의 작성일을 미래로 설정하면** GitHub Pages/Jekyll 설정에 따라 글이 바로 보이지 않을 수 있습니다.
 - 글에 이미지가 필요하면 `assets/images/`에 넣고 `![설명]({{ '/assets/images/image.png' | relative_url }})`처럼 참조하면 됩니다. 이 Liquid 식은 Jekyll 게시글 내부에서 사용할 수 있습니다.
+
+### LaTeX 수식
+
+모든 게시글에서 문장 안 수식은 `$...$`로 감싸고, 블록 수식은 위아래에 빈 줄을 둔 뒤 별도 줄의 `$$`로 감쌉니다.
+
+```markdown
+문장 안에 $x^2 + y^2 = r^2$처럼 수식을 넣습니다.
+
+$$
+\sum_{k=1}^{n} k = \frac{n(n+1)}{2}
+$$
+```
 
 ## 5. 내 블로그로 꾸미기
 
@@ -93,7 +105,7 @@ print("Hello, trace.log!")
 | 색상, 폰트, 카드, 반응형 레이아웃 | `assets/css/style.css` (파일 상단 `:root`) |
 | 검색, 테마 전환, 필터 동작 | `assets/js/main.js` |
 | 프로필 대신 쓸 파비콘 | `assets/images/favicon.svg` |
-| 블로그 글 | `_posts/*.md` |
+| 블로그 글 | `_posts/<카테고리>/*.md` |
 
 제공한 8개 게시글은 모두 `sample: true`가 붙은 **예시 글**입니다. 실제 개인 성과를 뜻하지 않으므로 자유롭게 수정하거나 삭제하세요.
 
@@ -116,7 +128,7 @@ trace-log-blog/
 ├── _data/categories.yml        # 6개 카테고리 정의
 ├── _includes/                  # 헤더 / 푸터 / 글 카드
 ├── _layouts/                   # 공통 / 글 / 카테고리 레이아웃
-├── _posts/                     # Markdown 게시글
+├── _posts/                     # 6개 카테고리별 Markdown 게시글
 ├── categories/                 # 카테고리별 주소
 ├── assets/css/style.css        # 전체 커스텀 디자인
 ├── assets/js/main.js           # 검색, 메뉴, 테마, 필터
@@ -132,13 +144,13 @@ trace-log-blog/
 ## 8. 주요 기능
 
 - 6개 고정 카테고리 및 각 페이지
-- Markdown 기반 포스팅과 코드 블록
+- Markdown 기반 포스팅, 코드 블록, LaTeX 수식
 - 게시글 전체 검색 (제목/본문/태그)
 - 카테고리별 목록 필터
 - 모바일/데스크톱 반응형 디자인
 - 다크/라이트 테마 전환
 - RSS, SEO 기본 메타 태그, 404 페이지
-- 별도 유료 호스팅이나 브라우저 JS 라이브러리 없이 사용 가능
+- 별도 유료 호스팅 없이 사용 가능
 
 ---
 
