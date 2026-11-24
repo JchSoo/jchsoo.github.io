@@ -1,4 +1,4 @@
-# 실제 글을 작성할 때 이 파일을 복사해 _posts/YYYY-MM-DD-english-slug.md 이름으로 저장하세요.
+# 실제 글을 작성할 때 이 파일을 복사해 _posts/<카테고리>/YYYY-MM-DD-english-slug.md에 저장하세요.
 # 이 파일은 .txt이므로 GitHub Pages에 게시되지 않습니다.
 ---
 layout: post

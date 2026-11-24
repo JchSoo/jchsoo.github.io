@@ -15,7 +15,7 @@ GitHub Pages는 GitHub 저장소의 파일을 웹사이트로 게시할 수 있�
 
 ## 이 블로그에서 사용하는 구조
 
-- `_posts/`: 날짜와 제목을 포함한 Markdown 글
+- `_posts/<카테고리>/`: 날짜와 제목을 포함한 Markdown 글
 - `_layouts/`: 공통 페이지 템플릿
 - `_data/categories.yml`: 카테고리별 이름과 설명
 - `assets/`: CSS, JavaScript, 아이콘
@@ -23,7 +23,7 @@ GitHub Pages는 GitHub 저장소의 파일을 웹사이트로 게시할 수 있�
 
 ## 새로운 글을 쓰는 방법
 
-`_posts/2026-10-30-new-note.md` 파일을 만들고 다음 형식을 사용합니다.
+`_posts/development/2026-10-30-new-note.md` 파일을 만들고 다음 형식을 사용합니다.
 
 ```yaml
 ---
