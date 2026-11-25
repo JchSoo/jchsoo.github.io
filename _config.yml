@@ -1,11 +1,10 @@
 # 여기만 수정해도 블로그의 기본 정보가 변경됩니다.
 title: "청정수"
-motto: "Keep learning."
 subtitle: "Security & Development Field Notes"
 description: "청정한 공간"
 author: "정청수"
 role: "Security Learner · Developer"
-about_short: "Focused on system security and reverse engineering."
+about_short: "Interested in system security and reverse engineering."
 github_username: "JchSoo"  # 본인 GitHub 아이디로 변경
 email: "rlqja1220@o.cnu.ac.kr"                     # 선택 사항: 공개할 이메일만 입력
 
