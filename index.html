@@ -4,7 +4,7 @@ layout: default
 <section class="shell home-intro" aria-labelledby="home-title">
   <div>
     <h1 id="home-title">{{ site.title | escape }}</h1>
-    <p class="home-motto">고인물이 되지 않기.</p>
+    <p class="home-motto">{{ site.motto | escape }}</p>
     <p class="home-description">{{ site.about_short | escape }}</p>
   </div>
   <div class="water-note" aria-hidden="true">
@@ -43,7 +43,7 @@ layout: default
     </nav>
     <div class="sidebar-about">
       <h2>{{ site.author | escape }}</h2>
-      <p>{{ site.intro | escape }}</p>
+      <p>{{ site.about_short | escape }}</p>
       <a href="{{ '/about/' | relative_url }}">조금 더 소개 <span aria-hidden="true">→</span></a>
     </div>
   </aside>
