@@ -10,8 +10,8 @@
   function updateThemeButton() {
     if (!themeButton) return;
     const light = document.documentElement.dataset.theme === 'light';
-    themeButton.setAttribute('aria-label', light ? '다크 테마 켜기' : '라이트 테마 켜기');
-    themeButton.setAttribute('title', light ? '다크 테마 켜기' : '라이트 테마 켜기');
+    themeButton.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+    themeButton.setAttribute('title', light ? 'Switch to dark mode' : 'Switch to light mode');
   }
   updateThemeButton();
   themeButton?.addEventListener('click', () => {
@@ -28,13 +28,13 @@
     if (!mobileNav || !menuButton) return;
     mobileNav.hidden = true;
     menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', '모바일 메뉴 열기');
+    menuButton.setAttribute('aria-label', 'Open menu');
   }
   menuButton?.addEventListener('click', () => {
     mobileNav.hidden = !mobileNav.hidden;
     const open = !mobileNav.hidden;
     menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.setAttribute('aria-label', open ? '모바일 메뉴 닫기' : '모바일 메뉴 열기');
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
   $$('a', mobileNav || document.createElement('nav')).forEach(a => a.addEventListener('click', closeMobileNav));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
