@@ -100,7 +100,7 @@ $$
 | --- | --- |
 | 블로그 이름, 자기소개, GitHub 아이디, 메일 | `_config.yml` |
 | About 소개 문장, 관심 분야 | `about.html` |
-| 메인 헤드라인과 터미널 내용 | `index.html` |
+| 메인 소개와 글 목록 구성 | `index.html` |
 | 6개 메뉴, 설명 | `_data/categories.yml` |
 | 색상, 폰트, 카드, 반응형 레이아웃 | `assets/css/style.css` (파일 상단 `:root`) |
 | 검색, 테마 전환, 필터 동작 | `assets/js/main.js` |

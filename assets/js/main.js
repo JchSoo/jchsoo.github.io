@@ -1,4 +1,4 @@
-/* trace.log — no frameworks, no trackers, no external JS dependencies. */
+/* 청정수 — search, navigation, theme, and category filters. */
 (() => {
   'use strict';
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -17,7 +17,7 @@
   themeButton?.addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
-    try { localStorage.setItem('trace-theme', next); } catch (_) { /* optional storage */ }
+    try { localStorage.setItem('cheongjeongsu-theme', next); } catch (_) { /* optional storage */ }
     updateThemeButton();
   });
 
