@@ -1,15 +1,16 @@
+{% assign navigation_version = site.time | date: '%s' %}
 <header class="site-header" id="top">
   <div class="shell header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.author | escape }} 홈">
+    <a class="brand" href="{{ '/' | relative_url }}?v={{ navigation_version }}" aria-label="{{ site.author | escape }} 홈">
       <svg class="brand-mark" aria-hidden="true" viewBox="0 0 32 32" fill="none"><path d="M16 3c-2.5 5-9 11-9 17a9 9 0 0 0 18 0c0-6-6.5-12-9-17Z"/><path d="M11 20a5 5 0 0 0 5 5"/></svg>
       <span class="brand-type">{{ site.author | escape }}</span>
     </a>
 
     <nav class="desktop-nav" aria-label="Main navigation" lang="en">
-      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
-      <a href="{{ '/archive/' | relative_url }}" {% if page.url == '/archive/' %}aria-current="page"{% endif %}>Archive</a>
-      <a href="{{ '/#recent-posts' | relative_url }}">Recent Posts</a>
-      <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/' | relative_url }}?v={{ navigation_version }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/archive/' | relative_url }}?v={{ navigation_version }}" {% if page.url == '/archive/' %}aria-current="page"{% endif %}>Archive</a>
+      <a href="{{ '/' | relative_url }}?v={{ navigation_version }}#recent-posts">Recent Posts</a>
+      <a href="{{ '/about/' | relative_url }}?v={{ navigation_version }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
     </nav>
 
     <div class="header-actions" lang="en">
@@ -25,9 +26,9 @@
     </div>
   </div>
   <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" lang="en" hidden>
-    <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
-    <a href="{{ '/archive/' | relative_url }}">Archive</a>
-    <a href="{{ '/#recent-posts' | relative_url }}">Recent Posts</a>
-    <a href="{{ '/about/' | relative_url }}">About</a>
+    <a href="{{ '/' | relative_url }}?v={{ navigation_version }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+    <a href="{{ '/archive/' | relative_url }}?v={{ navigation_version }}">Archive</a>
+    <a href="{{ '/' | relative_url }}?v={{ navigation_version }}#recent-posts">Recent Posts</a>
+    <a href="{{ '/about/' | relative_url }}?v={{ navigation_version }}">About</a>
   </nav>
 </header>

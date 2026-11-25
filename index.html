@@ -27,7 +27,7 @@ layout: default
         {% include post-card.html post=post %}
       {% endfor %}
     </div>
-    <a class="archive-link" href="{{ '/archive/' | relative_url }}">이전 글도 보기 <span aria-hidden="true">→</span></a>
+    <a class="archive-link" href="{{ '/archive/' | relative_url }}" lang="en">Older posts <span aria-hidden="true">→</span></a>
   </section>
 
   <aside class="home-sidebar">
@@ -43,7 +43,7 @@ layout: default
     <div class="sidebar-about">
       <h2>{{ site.author | escape }}</h2>
       <p>{{ site.about_short | escape }}</p>
-      <a href="{{ '/about/' | relative_url }}">조금 더 소개 <span aria-hidden="true">→</span></a>
+      <a href="{{ '/about/' | relative_url }}" lang="en">More about me <span aria-hidden="true">→</span></a>
     </div>
   </aside>
 </div>
