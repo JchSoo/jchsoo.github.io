@@ -2,7 +2,7 @@
 layout: post
 title: "[나이츠프론티어] 나에대해 기록하기"
 description: "내가 중요하게 생각하는 세 가치관과, 나이츠프론티어에서 이루고 싶은 목표와 경험을 정리했다."
-categories: [activities]
+categories: [docs]
 tags: [나이츠프론티어]
 ---
 
